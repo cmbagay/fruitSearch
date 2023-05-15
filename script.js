@@ -35,7 +35,8 @@ function search(str) {
 
 function showSuggestions(results, inputVal) {
 	//7 Take the list created in the previous step in a drop down list below the search bar.
-	suggestions.innerText = '';
+	suggestions.innerText = ''; //reset/clear suggestion list when new keystroke is added
+
 	if (inputVal !== '') { //show list, once input is made
 		for (let suggestedFruit of results) {
 			const suggested = document.createElement('li'); //create suggestion element
@@ -44,17 +45,16 @@ function showSuggestions(results, inputVal) {
 			suggestions.append(suggested); //append li to suggestion ul element
 		}
 	}
-
 }
 
 function useSuggestion(e) {
 	// TODO 9 When a user clicks on a suggestion, that string should fill the Search Bar. Add an event listener which triggers when a user clicks. Write a function useSuggestion() to populate the Search Bar with the suggestion. Add this function to the event listener.
 
-	let chosenFruit = e.target.innerText;
+	let chosenFruit = e.target.innerText; //capture input
 	console.log('Choosing Fruit: ', chosenFruit);
 
-	input.value = chosenFruit;
-	suggestions.innerText = '';
+	input.value = chosenFruit; //change input in search bar
+	suggestions.innerText = ''; //reset/clear suggestion list
 
 }
 
