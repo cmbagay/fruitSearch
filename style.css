@@ -44,6 +44,71 @@ input:focus {
 
   border-radius: 3px;
   overflow: hidden;
+}body {
+  display: flex;
+  /* centers search bar in page */
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  overflow: hidden;
+
+  /* https: //cssgradient.io/ */
+  background: rgb(248, 210, 31);
+  background: linear-gradient(90deg, rgb(248, 210, 31), rgb(230, 92, 0));
+}
+
+.search-container {
+  position: fixed;
+}
+
+input {
+
+  padding: 10px 40px;
+
+  background: rgba(255, 255, 255, 0.24);
+
+  border: none;
+  border-radius: 2px;
+  border-bottom: 1px solid red;
+
+  text-align: center;
+}
+
+input:focus {
+  border: 1px solid red;
+}
+
+
+
+.search-container .suggestions {
+  display: block;
+  position: absolute;
+  width: 100%;
+
+
+  background: rgba(255, 255, 255, 0.24);
+
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+
+
+}
+
+
+ul li:hover {
+  background: rgba(255, 255, 255, 0.35);
 }
 
 ul {
